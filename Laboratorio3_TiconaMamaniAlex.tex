@@ -1,0 +1,534 @@
+\documentclass[12pt,a4paper]{book}
+ \usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath} 
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry} \begin{document}
+\thispagestyle{empty}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+ {\centering
+  
+ \begin{figure}[htb] \centering
+
+\includegraphics[scale=1]{Imagenes/upt.jpg}
+ \end{figure}
+
+
+\large{\bf UNIVERSIDAD PRIVADA DE TACNA}\\ \vspace{0.5cm}
+\large{\bf FACULTAD DE INGENIERIA }\\ \vspace{0.5cm}
+
+\large{\bf Escuela Profesional de Ingeniería de Sistemas } \\ \vspace{1cm}
+
+{\large {\bf Laboratorio 3 - Unidad I }}\\ \vspace{1cm}
+
+{\large {\bf “POWER BI” }}\\ \vspace{2cm} 
+
+\large Curso: INTELIGENCIA DE NEGOCIOS\\ \vspace{1.5cm}
+\large Docente: Ing. Patrick Cuadros Quiroga \\ \vspace{1.5cm}
+\large Ticona Mamani, Alex Armando (2017057860) \\ \vspace{4cm}
+\vspace{0.5cm} {\Large {\bf \textsc{Tacna - Perú} }}\\ {\Large {\bf \textsc{2019}}} \\}
+
+
+
+\begin{center}
+
+
+
+\section*{ \\ PRACTICA DE LABORATORIO 03: \\ Creando un Reporte Interactivo en Power BI } 
+\end{center}
+
+\hfill \break
+
+\subsubsection*{1.	REQUERIMIENTOS}
+
+\begin{itemize}
+\item Conocimientos \\
+
+Para el desarrollo de esta práctica se requerirá de los siguientes conocimientos básicos:
+
+\begin{itemize}
+\item Conocimientos básicos de administración de base de datos Microsoft SQL Server.
+\item Conocimientos básicos de SQL.
+
+\end{itemize}
+
+\item software 
+Asimismo, se necesita los siguientes aplicativos:
+
+\begin{itemize}
+
+\item Microsoft SQL Server 2016 o superior
+\item	Base de datos AdventureWorksLT2016 o superior
+\item	Tener los archivos de recursos del laboratorio.
+\item	Power BI Desktop.
+\item	Tener una cuenta Microsoft registrada en el Portal de Power Bi
+
+\end{itemize}
+
+\end{itemize}
+
+
+\subsubsection*{crear una app}
+\begin{itemize}
+\item Inicie Qlik Sense.
+\item Cree una nueva aplicación.
+\item Nombre la aplicación: " Mi análisis de ventas "
+\item Crear y abrir la aplicación 
+\end{itemize}
+
+
+
+\subsubsection*{2.	CONSIDERACIONES INICIALES}
+
+Generar una carpeta o directorio Power BI en un lugar accesible para guardar los resultados de la práctica.
+
+
+\hfill \break 
+\hfill \break
+\hfill \break
+\hfill \break
+\begin{center}
+\section*{ \\Ejercicio 1: Conectando a Power BI a datos } 
+\end{center}
+
+\subsubsection*{Tarea 1: Conectar a datos existentes}
+
+1. Abrir SQL Server Management Studio, y conectar a la instancia de base de datos (local) utilizando autenticación de Windows.\\
+2. En el menú Archivo (File), en el submenú Abrir (Open), hacer click en Project/Solution, y buscar el archivo \\ Project.ssmssln.\\
+\begin{center}
+\includegraphics[width=8cm]{Imagenes/img12.png}\\
+\includegraphics[width=6cm]{Imagenes/img13.png}\\
+\end{center}
+3. En el Explorador de Soluciones, expandir Consultas (Queries), y luego hacer doble click en el archivo Lab Exercise 1.sql.\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img14.png}
+\end{center}
+\begin{center}
+\includegraphics[width=10cm]{Imagenes/img15.png} \\
+\end{center} 
+4. Abrir Power BI Desktop.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img16.png}
+\end{center}
+
+•	En la ventana Power BI Desktop, hacer click en Obtener Data (Get Data).
+
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img17.png}
+\end{center}
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img18.png}
+\end{center}
+
+5. En la ventana Power BI Desktop, hacer click en Obtener Data (Get Data).\\
+
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img19.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img20.png}
+\end{center}
+6.	En la ventana base de datos Server database, En Servidor, escribir (local). \\
+7.	En Base de Datos (opcional), tipear AdventureWorksLT.\\
+8.	Expandir el cuadro Opciones Avanzadas. Copiar el script Task 1 del archivo Lab Exercise 1.sql. y pegar la consulta en Power BI, en el cuadro sentencia SQL. Luego presionar OK.
+
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img21.png}
+\end{center}
+9.	En la ventana de vista preliminar click en Cargar.
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img22.png}
+\end{center}
+10.	En Power BI Desktop, click Obtener Datos y luego click en Mas.
+\begin{center}
+\includegraphics[width=10cm]{Imagenes/img23.png}
+\end{center}
+11.	Repetir los pasos del 6 al 10, utilizando el script Task 2.
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img24.png}
+\end{center}
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img25.png}
+\end{center}
+12.	De regreso en el reporte. Guardar el archivo como AdventureWorksLT Sales.pbix.
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img26.png}
+\end{center}
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img27.png}
+\end{center}
+\subsubsection*{Tarea 2: Graficar Datos\\}
+1. En el panel Campos (Fields), click derecho sobre Query1, Renombrar, tipear Customers y presionar Enter.\\
+2. Para el Query2, hacer lo mismo del paso 1 y colocar el nombre Sales.
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img28.png}
+\end{center}
+3.Expandir ambas tablas para ver todas las filas.
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img29.png}
+\end{center}
+4. En la barra de navegación, click Datos (Data).
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img30.png}
+\end{center}
+5.	En el panel Campos, haga clic en la tabla Clientes, si aún no está seleccionada.\\
+\begin{center}
+\includegraphics[width=15cm]{Imagenes/img31.png}
+\end{center}
+6.	Haga clic con el botón derecho en la columna NameStyle y haga clic en Eliminar.\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img32.png}
+\end{center}
+7.	En el cuadro de diálogo Eliminar columna, haga clic en Eliminar.\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img33.png}
+\end{center}
+8.	Repita los pasos 6 y 7 para la columna SalesPerson.\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img34.png}
+\end{center}
+9.	Haga clic con el botón derecho en la columna CustomerID y, a continuación, \\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img35.png}
+\end{center}
+10.	Haga clic en el encabezado de la columna AddressLine1.\\
+11.	En la cinta Modelado, en el grupo Propiedades, haga clic en Categoría de datos: Sin categoría y luego en Dirección.\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img36.png}
+\end{center}
+12.	Haga clic en el encabezado de la columna Ciudad.\\
+13.	En la cinta Modelado, en el grupo Propiedades, haga clic en Categoría de datos: Sin categoría y luego en Ciudad.\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img37.png}
+\end{center}
+14.	Haga clic en el encabezado de la columna StateProvince.\\
+15.	En la cinta Modelado, en el grupo Propiedades, haga clic en Categoría de datos: Sin categoría y luego haga clic en Estado o Provincia.\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img38.png}
+\end{center}
+16.	Haga clic en el encabezado de la columna CountryRegion.\\
+17.	En la cinta Modelado, en el grupo Propiedades, haga clic en Categoría de datos: Sin categoría y luego haga clic en País / Región.\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img39.png}
+\end{center}
+18.	Haga clic en el encabezado de la columna PostalCode.\\
+19.	En la cinta Modelado, en el grupo Propiedades, haga clic en Categoría de datos: Sin categorizar y luego haga clic en Código postal.\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img40.png}
+\end{center}
+20.	En la cinta Modelado, en el grupo Cálculos, haga clic en Nueva columna y luego en la barra de fórmulas, escriba la siguiente expresión y presione Entrar:\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img41.png}
+\end{center}
+21. En el panel Campos, haga clic en Ventas.\\
+22.	Haga clic con el botón derecho en la columna RevisionNumber y haga clic en Eliminar\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img42.png}
+\end{center}
+23.	En el cuadro de diálogo Eliminar columna, haga clic en Eliminar.\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img43.png}
+\end{center}
+24.	Realizar el paso 23 y 34 para la columna SalesOrderNumber\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img44.png}
+\end{center}
+25.	Haga clic con el botón derecho en la columna CustomerID y luego haga clic en Ocultar en la vista de informe\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img45.png}
+\end{center}
+26.	Realizar el paso 25 para las columnas SalesOrderID y SalesOrderDetailID.\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img48.png}
+\end{center}
+27.	En la cinta Modelado, en el grupo Cálculos, haga clic en Nueva columna y luego en la barra de fórmulas, escriba la siguiente expresión y presione Entrar:\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img49.png}
+\end{center}
+28.	Haga clic en el encabezado de la columna LineTotal.\\
+29.	En la cinta Modelado, en el grupo Formato, haga clic en Formato: General, seleccione Moneda y luego haga clic en  Inglés (Estados Unidos).\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img50.png}
+\end{center}
+30.	En la cinta Modelado, en el grupo Cálculos, haga clic en Nueva medida y luego en la barra de fórmulas, escriba la siguiente expresión y presione Entrar.\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img51.png}
+\end{center}
+31.	Haga clic en Guardar y luego deje Power BI Desktop abierto para la siguiente tarea.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img52.png}
+\end{center}
+
+\subsubsection*{Tarea 3: Combinar Data\\}
+
+1.	En el Explorador de archivos y luego abra el archivo States.xlsx.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img53.png}
+\end{center}
+2.	En la hoja de trabajo de States, seleccione todos los valores en las dos columnas y luego presione Ctrl + C.\\
+3.	En Power BI Desktop, en la cinta Inicio, haga clic en Ingresar datos.\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img54.png}
+\end{center}
+4.	En el cuadro de diálogo Crear tabla, haga clic en la tabla y luego presione Ctrl + V. Power BI detecta que la primera fila es un encabezado de columna.\\
+5.	En el cuadro "Nombre", escriba "Ventas por estado" y luego haga clic en "Cargar".\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img55.png}
+\end{center}
+6.	En la cinta "Inicio", haga clic en Obtener datos y luego en Web.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img56.png}
+\end{center}
+7.	En el cuadro de diálogo Desde Web, en el cuadro URL, escriba\\
+\begin{center}
+\includegraphics[width=6cm]{Imagenes/img57.png}
+\end{center}
+8.	En el cuadro de diálogo Navegador, seleccione Códigos y abreviaturas para estados, territorios y otros regiones y luego haga clic en Cargar.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img58.png}
+\end{center}
+9.	En el panel Campos, haga clic en Códigos y abreviaturas de los estados, territorios y otras regiones de EE. UU. mostrar los datos. La tabla tiene 26 filas en la parte inferior que no son necesarias.\\
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img59.png}
+\end{center}
+10.	En la cinta Inicio, en el grupo Datos externos, haga clic en Editar consultas y luego en Editar consultas.\\
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img60.png}
+\end{center}
+11.	En el Editor de consultas, en el panel Consultas, haga clic en Códigos y abreviaturas para estados, territorios y otros regiones.\\
+12.	En la cinta Inicio, haga clic en Reducir filas, haga clic en Eliminar filas y, a continuación, haga clic en Eliminar filas inferiores.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img61.png}
+\end{center}
+13.	En el cuadro de diálogo Eliminar filas inferiores, en el cuadro Número de filas, escriba 26 y, a continuación, haga clic en Aceptar.\\
+\begin{center}
+\includegraphics[width=10cm]{Imagenes/img62.png}
+\end{center}
+14.	Haga clic en el encabezado de la columna ANSI2 y luego mantenga presionada la tecla Ctrl mientras selecciona todas las columnas a la derecho. Esto selecciona varias filas.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img63.png}
+\end{center}
+15.	Manteniendo presionada la tecla Ctrl, haga clic en las columnas Nombre y estado de region2 y Encabezado para incluirlo en el selección.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img64.png}
+\end{center}
+16.	En la cinta Inicio, haga clic en Administrar columnas, haga clic en Eliminar columnas y luego haga clic en Eliminar columnas.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img65.png}
+\end{center}
+17.	En el panel Configuración de la consulta, en Propiedades, en el cuadro Nombre, escriba Estados con códigos y luego presione Ingresar.\\
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img66.png}
+\end{center}
+18.	En la cinta Inicio, en el grupo Transformar, haga clic en Usar primera fila como encabezados.\\
+19.	Haga clic con el botón derecho en el encabezado de la columna Estados Unidos de América, haga clic en Cambiar nombre, escriba Nombre del estado y luego presione Ingresar.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img67.png}
+\end{center}
+20.	Haga clic con el botón derecho en el encabezado de la columna US USA 840, haga clic en Cambiar nombre, escriba Código de estado largo y luego presione Intro.\\
+21.	Haga clic con el botón derecho en el encabezado de la columna de EE. UU., Haga clic en Cambiar nombre, escriba Código de estado corto y luego presione Entrar.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img68.png}
+\end{center}
+22.	En el panel Consultas, haga clic en Ventas por estado.\\
+23.	En la cinta Inicio, haga clic en Combinar y luego en Combinar consultas.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img69.png}
+\end{center}
+24.	En el cuadro de diálogo Fusionar, en la tabla Ventas por estado, haga clic en la columna Estados.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img70.png}
+\end{center}
+25.	En la lista, haga clic en Estados con códigos, haga clic en la columna Nombre del estado y, a continuación, haga clic en Aceptar. La nueva columna es agregado a la tabla y contiene los estados combinados con la tabla de códigos.\\
+26.	En el encabezado de la columna, haga clic en el icono Expandir, desactive (Seleccionar todas las columnas), seleccione Código de estado corto, y luego haga clic en Aceptar. La columna ahora muestra solo los códigos de estado.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img71.png}
+\end{center}
+27.	Haga clic con el botón derecho en la columna, haga clic en Cambiar nombre, escriba Código de estado y luego presione Entrar.\\
+28.	En el menú Archivo, haga clic en Cerrar y aplicar.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img72.png}
+\end{center}
+29.	En el panel Campos, haga clic con el botón derecho en Estados con códigos y, a continuación, haga clic en Ocultar en la vista de informe.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img73.png}
+\end{center}
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img74.png}
+\end{center}
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img75.png}
+\end{center}
+
+\hfil \break \hfil \break \hfil \break \hfil \break 
+\begin{center}
+\section*{ \\Ejercicio 2: Construyendo Reportes en Power BI } 
+\end{center}
+
+\subsubsection*{Tarea 1: Crear un Gráfico}
+1.	En Power BI Desktop, en la barra derecha de navegación, hacer click en Reporte (Report).\\
+2.	En el panel de Visualizaciones (Visualizations), hacer click en Gauge.\\
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img77.png}
+\end{center}
+3.	Arrastar el campo LineTotal de la table Sales a la propiedad Valor (Value) del objeto gauge\\
+4.	Arrastrar la medida TargetSales de la table Sales a la propiedad Valor destino (Target value) del objeto gauge.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img78.png}
+\end{center}
+5.	Hacer clic en Formato, expandir Gauge axis, y luego en el cuadro Max, escribir 146000.\\
+6.	Expandir Titulo (Title), en el cuadro Texto de Titulo (Title Text), tipear Meta de Ventas (Target Sales), y luego hacer click en Center.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img79.png}
+\end{center}
+7.	Haga clic en el lienzo del informe y luego arrastre el campo CompanyName de la tabla Clientes al informe. Power BI crea automáticamente una tabla.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img80.png}
+\end{center}
+8.	Ponga una estrella en el campo LineTotal de la tabla Sales en el informe.
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img81.png}
+\end{center}
+9.	Asegúrese de que la tabla tenga el foco y, a continuación, en el panel Visualizaciones, haga clic en Gráfico circular.\\
+\begin{center}
+\includegraphics[width=8cm]{Imagenes/img83.png}
+\end{center}
+10.	Expanda el gráfico para hacer visibles todos los nombres de las empresas utilizando los controladores de tamaño en el borde del gráfico.\\
+11.	Con el foco todavía en el gráfico circular, haga clic en Formato y luego expanda Título.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img82.png}
+\end{center}
+12.	En el cuadro Texto del título, escriba Clientes más vendidos y luego haga clic en Centro.\\
+13.	Arrastar el campo MainCategory de la tabla Tabla de ventas en el lienzo del informe. Power BI crea una tabla.\\
+\begin{center}
+\includegraphics[width=10cm]{Imagenes/img84.png}
+\end{center}
+14.	Arrastar el campo OrderQty dentro de la tabla.\\
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img85.png}
+\end{center}
+15.	En el panel Visualizaciones, haga clic en Gráfico de barras apiladas.\\
+\begin{center}
+\includegraphics[width=10cm]{Imagenes/img86.png}
+\end{center}
+16.	En el panel Visualizaciones, haga clic en Campos.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img87.png}
+\end{center}
+17.	Arrastre el campo OrderQty a la propiedad Color saturation. Observe que los colores cambian.\\
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img90.png}
+\end{center}
+18.	En el panel Visualizaciones, haga clic en Análisis, expanda Línea constante y luego haga clic en Agregar.\\
+19.	En el cuadro Valor, escriba 500.\\
+\begin{center}
+\includegraphics[width=10cm]{Imagenes/img91.png}
+\end{center}
+20.	Cambie el color a rojo, cambie Etiqueta de datos a Activado y luego cambie el color a rojo.\\
+\begin{center}
+\includegraphics[width=10cm]{Imagenes/img92.png}
+\end{center}
+21.	En el panel Visualizaciones, haga clic en Formato y expanda Título.\\
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img93.png}
+\end{center}
+22.	En el cuadro Texto del título, escriba Pedidos por categoría principal y luego haga clic en Centro\\
+23.	Haga clic en el lienzo del informe para enfocarlo y, a continuación, en el panel Visualizaciones, haga clic en Gráfico de anillos.\\
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img94.png}
+\end{center}
+24.	En la tabla Sales, seleccione MainCategory y LineTotal.\\
+25.	En el panel Visualizaciones, haga clic en Formato y luego expanda Título\\
+26.	En el cuadro Texto del título, escriba Ventas por categoría principal y luego haga clic en Centro.\\
+27.	Arrastre el campo Producto de la tabla Ventas al lienzo del informe. Power BI crea una tabla\\
+28.	Arrastre el campo LineTotal de la tabla Sales al gráfico de la tabla de productos.\\
+29.	En la tabla Ventas, seleccione el campo Categoría principal.\\
+30.	En el panel Visualizaciones, haga clic en Campos.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img95.png}
+\end{center}
+31.	En el panel Filtros, expanda LineTotal (All).\\
+32.	En la lista Mostrar elementos cuando el valor, seleccione es mayor que y, a continuación, en el cuadro siguiente, escriba 32000.\\
+33.	Hacer clic en Aplicar filtro (Aplicar filtro).\\
+34.	Expanda MainCategory (All) y luego seleccione Bikes.\\
+35.	En el panel Visualizaciones, haga clic en Gráfico de columnas apiladas.\\
+36.	En el panel Visualizaciones, haga clic en Formato y luego expanda Título.\\\begin{center}
+\includegraphics[width=5cm]{Imagenes/img96.png}
+\end{center}
+37.	En el cuadro Texto del título, escriba Las 10 bicicletas más vendidas y luego haga clic en Centro.\\
+38.	En el panel Visualizaciones, haga clic en Análisis, expanda Línea constante y luego haga clic en Agregar\\
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img97.png}
+\end{center}
+39.	En el cuadro Valor, escriba 35000 y luego establezca Color en rojo.\\
+40.	Cambie Etiqueta de datos a Activado y, a continuación, establezca Color en rojo\\
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img98.png}
+\end{center}
+41.	Expanda el gráfico para llenar el espacio restante en el lienzo del informe. Si es necesario, mueva sus imágenes para que encajen.\\
+42.	Click Save.\\
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img99.png}
+\end{center}
+\subsubsection*{Tarea 2: Crear una Visualización de Mapa}
+1.	En la parte inferior del informe, haga clic en el icono + para agregar una nueva página.\\
+2.	En el panel Campos, en la tabla Clientes, seleccione el campo Ciudad. Power BI agrega un mapa al informe.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img100.png}
+\end{center}
+3.	En el panel Campos, en la tabla Ventas, seleccione el campo LineTotal.\\
+4.	Con la herramienta de captura en el lado derecho del gráfico, cambie el tamaño del mapa para mostrar todas las burbujas.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img101.png}
+\end{center}
+5.	Observe que las burbujas tienen un tamaño proporcional para representar los datos.\\
+6.	En el panel Visualizaciones, haga clic en Formato y luego expanda Título.\\
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img102.png}
+\end{center}
+7.	En el cuadro Texto del título, escriba Ventas mundiales por ciudad y luego haga clic en Centro\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img103.png}
+\end{center}
+8.	Haga clic en el lienzo del informe y, a continuación, en la tabla Ventas por estado, seleccione la columna Código de estado. Power BI agrega automáticamente un mapa.\\
+9.	En la tabla Sales by State, seleccione la columna SalesYTD.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img104.png}
+\end{center}
+10.	En el panel Visualizaciones, haga clic en Mapa lleno. Con la herramienta de captura en el lado derecho y en la parte inferior del gráfico, cambie el tamaño del mapa para mostrar todos los estados.\\
+11.	Observe que las ventas se agrupan en un área.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img105.png}
+\end{center}
+12.	Coloque el cursor en California (CA) para ver la cifra de ventas. El valor no se ha formateado como moneda\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img106.png}
+\end{center}
+14. En la tabla Sales by State, haga clic en la columna SalesYTD.\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img107.png}
+\end{center}
+15.	En la cinta de Modelado, seleccione Formato: General, haga clic en Moneda y luego seleccione  Inglés (Estados Unidos).\\
+\begin{center}
+\includegraphics[width=12cm]{Imagenes/img108.png}
+\end{center}
+16.	Coloque el cursor en California (CA) en el mapa y observe que se ha formateado el valor.\\
+17.	En el panel Visualizaciones, haga clic en Formato y luego expanda Título\\
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img109.png}
+\end{center}
+18.	En el cuadro Texto del título, escriba Ventas por estado y luego haga clic en Centro.\\
+19.	Haga clic en Guardar y luego deje el informe abierto para el próximo ejercicio.\\
+\begin{center}
+\includegraphics[width=5cm]{Imagenes/img110.png}
+\end{center}
+
+
+\end{document}
+
